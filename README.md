@@ -120,3 +120,12 @@ $ tree -L 1
 npm run build
 ```
 buildフォルダの中には、`index.html`が用意されている。アップロードした場所にアクセスすると、まずこのファイルが読み込まれ表示されるようになっている。
+
+### <script>タグの用意
+Reactでは、scriptタグで以下のスクリプトを読み込んでいます。
+```html
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+```
+* react.development.js：これがReactの本体
+* react-dom.development.js：これはReactの仮想DOMのスクリプトファイル
