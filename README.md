@@ -119,9 +119,11 @@ $ tree -L 1
 ```sh
 npm run build
 ```
-buildフォルダの中には、`index.html`が用意されている。アップロードした場所にアクセスすると、まずこのファイルが読み込まれ表示されるようになっている。
+buildフォルダの中には、`index.html`が用意されている。アップロードした場所にアクセスすると、まずこのファイルが読み込まれ表示されるようになっている。<br>
 
-### <script>タグの用意
+<br>
+
+### CDN
 Reactでは、scriptタグで以下のスクリプトを読み込んでいます。
 ```html
 	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -129,3 +131,16 @@ Reactでは、scriptタグで以下のスクリプトを読み込んでいます
 ```
 * react.development.js：これがReactの本体
 * react-dom.development.js：これはReactの仮想DOMのスクリプトファイル
+
+<br>
+
+### エレメントとノード
+以下のコードについて、エレメントとノードについて考えてみます。
+```sh
+<div>
+    <p> Hello </p>
+</div>
+```
+上記のコードについて、
+* divタグのエレメント中に組み込まれているエレメントは、`<p>タグのエレメント`
+* divタグのエレメント中に組み込まれているノードは順に、`改行と半角スペースのテキストノード`、`<p>タグのエレメント`、`改行のテキストノード`
